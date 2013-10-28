@@ -1,6 +1,10 @@
-<!DOCTYPE html>
+{% extends 'rango/base.html' %}
 
 {% load static %}
+
+{% block title %}About page{% endblock %}
+
+{% block body_block %}
 <html>
 
 	<head>
@@ -9,9 +13,10 @@
 
 	<body>
 		<h1>This is</h1>
-		an about page! <strong>{{ boldmessage }}</strong><br />
-		<a href="/rango/">Rango's main page</a><br />
-		<img src="/rango/media/1.jpg" alt="Picture of Rango" />
+		an about page! <br /><strong>{{ boldmessage }}</strong><br />
+		<img src="/rango/media/1.jpg" alt="Picture of Rango" /><br /><br />
+		You have visited this page {{ visits }} times!
 	</body>
 
 </html>
+{% endblock %}
